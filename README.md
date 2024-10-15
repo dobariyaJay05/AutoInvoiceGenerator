@@ -60,6 +60,15 @@ Here are some examples of the macros used in this project:
 
 ```vba
 ' Macro to Generate Invoice
+Sub CreateNewInvoice()
+invoiceno = Range("G4")
+Range("D5,B11:F18").ClearContents
+MsgBox "Your Next Invoice No. is " & invoiceno + 1
+Range("G4") = invoiceno + 1
+ThisWorkbook.Save
+
+End Sub
+
 Sub PDF()
 
 Dim invoive_number As Long
@@ -109,4 +118,4 @@ If you'd like to contribute to this project, feel free to submit pull requests o
 
 Let me know if you'd like to add any specific details or instructions!
 
-![Untitled design](https://github.com/user-attachments/assets/005b571d-1a68-46d0-840d-6b5ef6886197)
+![Untitled design (1)](https://github.com/user-attachments/assets/d9ae83dd-3bf8-46b4-9fd7-cb94de475522)
